@@ -113,15 +113,15 @@
 
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
   <main class="form-signin w-100 m-auto">
-    <form>
+    <form action="/login" method="POST">
       <h1 class="h3 mb-3 fw-normal">Login</h1>
 
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="nome@exampl.com" name="email">
+        <input type="email" class="form-control {{class}}" id="floatingInput" value="{{username}}" placeholder="nome@exampl.com" name="username">
         <label for="floatingInput">Email</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="senha">
+        <input type="password" class="form-control {{class}}" id="floatingPassword" placeholder="Senha" name="password">
         <label for="floatingPassword">Senha</label>
       </div>
 
@@ -130,6 +130,9 @@
         <label class="form-check-label" for="flexCheckDefault">
           Lembrar
         </label>
+      </div>
+      <div class="col-12">
+        <div class="text-center text-danger">{{message}}</div>
       </div>
       <button class="btn btn-primary w-100 py-2" type="submit">Entrar</button>
       <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>

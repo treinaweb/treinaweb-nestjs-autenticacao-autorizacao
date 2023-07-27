@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt';
 export class AuthService {
   constructor(private userService: UsersService) {}
 
-  async validateUser(username: string, password) {
+  async validateUser(username: string, password: string) {
     const user = await this.userService.findUserByEmail(username);
     if (user) {
       const match = await bcrypt.compare(password, user.senha);

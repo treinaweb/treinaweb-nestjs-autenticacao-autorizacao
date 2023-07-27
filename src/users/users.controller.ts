@@ -3,15 +3,15 @@ import {
   Get,
   Post,
   Body,
-  Patch,
-  Param,
-  Delete,
   Render,
   Redirect,
+  UseGuards,
+  UseFilters,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { AuthenticatedGuard } from 'src/common/guards/authenticated.guard';
+import { AuthExceptionFilter } from 'src/common/filters/auth-exception.filter';
 
 @Controller('users')
 export class UsersController {
@@ -30,23 +30,10 @@ export class UsersController {
   }
 
   @Get()
+  @UseFilters(AuthExceptionFilter)
+  @UseGuards(AuthenticatedGuard)
   @Render('users/index')
   async findAll() {
     return { users: await this.usersService.findAll() };
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
   }
 }
