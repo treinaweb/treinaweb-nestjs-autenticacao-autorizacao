@@ -1,73 +1,13 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Aula | Commit | Link 
+------ | ------ | ------ 
+Aula  | Criando Projeto | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/e2cd205b4488ed1e8db94335325d24a7d80e8066.zip) 
+Aula  | Criando banco de dados e configurando TypeORM | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/d03a1fff057f4676346ac8e11fd7fb99acc88a71.zip) 
+Aula  | Criando entidade usuários | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/faec3d6506ec317caf6203deb9f52455e0e88e45.zip) 
+Aula  | Configurando Handlebars e criando view create | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/d3175cc1fdfabd9ab5135dabcf6f0b8b3ad6f587.zip) 
+Aula  | Implemetando cadastro de usuário | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/59b7ed5efd94c3c057800fa5358619a94e779756.zip) 
+Aula  | Tela de listagem de usuarios | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/e80b711681dc60045651da699364fe5fcc3d1170.zip) 
+Aula  | Crianção dos guards | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/6a887ad6a19c0d6d0e9b076db5229d36513fe96a.zip) 
+Aula  | Configurando flash messages | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/af9d172d59a2f3d51766ebade7ab231810d1d82a.zip) 
+Aula  | Configurando decorators e guard de autorização | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/6c0b53e2bb20b579de8207bc6bd1bbe4cd703c06.zip) 
+Aula  | Configurando password reset | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/2a5a9d6dd30dd75ef0c04ab1d251cb8c58074f07.zip) 
+Aula  | Projeto Final | [Download](https://github.com/treinaweb/treinaweb-nestjs-autenticacao-autorizacao/archive/1d9094c71afdd6974d0d9066591fb0bca5f9f7d4.zip) 
