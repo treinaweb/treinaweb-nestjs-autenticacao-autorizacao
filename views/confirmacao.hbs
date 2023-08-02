@@ -113,14 +113,14 @@
 
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
   <main class="form-signin w-100 m-auto">
-    <form action="/password-reset" method="POST">
-      <h1 class="h3 mb-3 fw-normal">Recuperar Senha</h1>
-
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" value="" placeholder="Digite seu email cadastrado" name="email">
-        <label for="floatingInput">Email</label>
+    <form action="/password-reset/confirmacao" method="POST">
+      <h1 class="h4 mb-3 fw-normal">Cadastre Sua Nova Senha</h1>
+        <input type="hidden" class="form-control" value="{{tokenPassword}}" name="token">
+       <div class="form-floating">
+        <input type="password" class="form-control"  placeholder="Nova Senha" name="password">
+        <label for="Nova senha">Nova Senha</label>
       </div>
-      <button class="btn btn-primary w-100 py-2" type="submit" onclick="alert('Enviamos as instruções de reset de senha para seu email cadastrado.')">Enviar</button>
+      <button class="btn btn-primary w-100 py-2" type="submit">Enviar</button>
       <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
     </form>
   </main>

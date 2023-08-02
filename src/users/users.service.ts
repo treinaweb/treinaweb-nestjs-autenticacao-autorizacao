@@ -16,6 +16,10 @@ export class UsersService {
     return await this.userRepository.save(user);
   }
 
+  async update(user: User) {
+    return await this.userRepository.update(user.id, user);
+  }
+
   async findAll() {
     return await this.userRepository.find();
   }

@@ -1,7 +1,9 @@
 import {
+  Body,
   Controller,
   Get,
   Post,
+  Query,
   Redirect,
   Render,
   Req,
@@ -33,6 +35,17 @@ export class AppController {
   @Render('password-reset')
   passwordReset() {
     //
+  }
+
+  @Get('confirmacao')
+  @Render('confirmacao')
+  async confirmacaoPassword(
+    @Req() req: Request,
+    @Query('token') token: string,
+  ) {
+    return {
+      tokenPassword: token,
+    };
   }
 
   @Get('home')

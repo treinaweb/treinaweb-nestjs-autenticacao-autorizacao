@@ -6,6 +6,8 @@ import { PasswordReset } from './entities/password-reset.entity';
 import { randomUUID } from 'crypto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { MailService } from 'src/common/mail/mail.service';
+import { PasswordResetDto } from './dto/password-reset.dto';
 
 @Injectable()
 export class PasswordResetService {
@@ -13,6 +15,7 @@ export class PasswordResetService {
     private userService: UsersService,
     @InjectRepository(PasswordReset)
     private passwordResetRepository: Repository<PasswordReset>,
+    private mail: MailService,
   ) {}
   async createPasswordReset(createPasswordResetDto: CreatePasswordResetDto) {
     const user = await this.userService.findUserByEmail(
@@ -23,8 +26,18 @@ export class PasswordResetService {
       passwordReset.email = createPasswordResetDto.email;
       passwordReset.token = randomUUID();
       await this.passwordResetRepository.save(passwordReset);
-      await this.mail.enviaremailDeResetDeSenha(passwordReset);
+      await this.mail.enviarEmailDeResetDeSenha(passwordReset);
     }
+  }
+
+  async resetarSenha(newPasswordReset: PasswordResetDto) {
+    const passwordReset = await this.passwordResetRepository.findOneBy({
+      token: newPasswordReset.token,
+    });
+    const user = await this.userService.findUserByEmail(passwordReset.email);
+    await user.setPassword(newPasswordReset.password);
+    await this.userService.update(user);
+    await this.passwordResetRepository.delete(passwordReset.id);
   }
 
   findAll() {
